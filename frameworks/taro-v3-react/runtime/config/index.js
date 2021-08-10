@@ -1,11 +1,11 @@
 const config = {
-  projectName: 'taro-v3-vue',
+  projectName: 'taro-v3-react',
   date: '2021-8-9',
   designWidth: 750,
   deviceRatio: {
-    // 640: 2.34 / 2,
-    750: 2,
-    // 828: 1.81 / 2
+    640: 2.34 / 2,
+    750: 1,
+    828: 1.81 / 2
   },
   sourceRoot: 'src',
   outputRoot: 'dist',
@@ -18,7 +18,7 @@ const config = {
     options: {
     }
   },
-  framework: 'vue',
+  framework: 'react',
   mini: {
     postcss: {
       pxtransform: {
@@ -49,11 +49,6 @@ const config = {
       autoprefixer: {
         enable: true,
         config: {
-          browsers: [
-            'last 3 versions',
-            'Android >= 4.1',
-            'ios >= 8'
-          ]
         }
       },
       cssModules: {

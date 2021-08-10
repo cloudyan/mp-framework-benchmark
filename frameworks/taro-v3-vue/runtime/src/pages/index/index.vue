@@ -3,12 +3,14 @@
     <view class="controls">
       <button @tap="add">新增可用券(100)</button>
       <button @tap="deleteAll">删除可用券(all)</button>
-      <button @tap="addLot">新增可用券(1000)</button>
+      <button @tap="addLot1">新增可用券(500)</button>
+      <button @tap="addLot2">新增可用券(1000)</button>
       <button @tap="update">更新可用券(1)</button>
       <button @tap="updateAll">更新可用券(all)</button>
       <button @tap="deleteOne">删除可用券(1)</button>
-      <button @tap="add2Lot">新增不可用券(1000)</button>
-      <button @tap="add2Lot2">新增不可用券(5000)</button>
+      <button @tap="add2Lot1">新增不可用券(500)</button>
+      <button @tap="add2Lot2">新增不可用券(1000)</button>
+      <button @tap="add2Lot3">新增不可用券(5000)</button>
       <button @tap="toggleList">切换到{{show2?'可用券':'不可用券'}}</button>
       <button @tap="reLaunch">刷新页面</button>
       <button @tap="reLaunch2">进入静态测试</button>
@@ -65,11 +67,15 @@
         getTimeWithModal(getCurrentPageContext())
         this.show2 = !this.show2
       },
-      add2Lot () {
+      add2Lot1 () {
+        getTimeWithModal(getCurrentPageContext())
+        this.listData2 = this.listData2.concat(buildData(500, true))
+      },
+      add2Lot2 () {
         getTimeWithModal(getCurrentPageContext())
         this.listData2 = this.listData2.concat(buildData(1000, true))
       },
-      add2Lot2 () {
+      add2Lot3 () {
         getTimeWithModal(getCurrentPageContext())
         this.listData2 = this.listData2.concat(buildData(5000, true))
       },
@@ -77,7 +83,11 @@
         getTimeWithModal(getCurrentPageContext())
         this.listData = this.listData.concat(buildData(100))
       },
-      addLot () {
+      addLot1 () {
+        getTimeWithModal(getCurrentPageContext())
+        this.listData = this.listData.concat(buildData(500))
+      },
+      addLot2 () {
         getTimeWithModal(getCurrentPageContext())
         this.listData = this.listData.concat(buildData(1000))
       },
